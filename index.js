@@ -1,6 +1,7 @@
 const daily = document.querySelector(".daily")
 // const weekly = document.querySelector(".weekly")
 // const monthly = document.querySelector(".monthly")
+const last = document.querySelectorAll(".last")
 const reportSelection = document.querySelectorAll(".reports");
 const period = document.querySelectorAll(".period")
 
@@ -28,9 +29,11 @@ reportSelection.forEach(function(e){
                             if(hours[i].classList.contains(data[i].title)){
                                 if(this.innerHTML=="Daily"){
                                     hours[i].innerHTML = data[i].timeframes.daily.current
-
+                                    last.forEach(function(e){
+                                        e.innerHTML = ""
+                                    })
                                     period.forEach(function(e){
-                                        e.innerHTML = "Day"
+                                        e.innerHTML = "Yesterday"
                                     })
 
                                     previousHours[i].innerHTML = data[i].timeframes.daily.previous
