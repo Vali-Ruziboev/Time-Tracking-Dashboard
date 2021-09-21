@@ -40,7 +40,9 @@ reportSelection.forEach(function(e){
                                 }
                                 else if(this.innerHTML=="Weekly"){
                                     hours[i].innerHTML = data[i].timeframes.weekly.current
-
+                                    last.forEach(function(e){
+                                        e.innerHTML = "Last"
+                                    })
                                     period.forEach(function(e){
                                         e.innerHTML = "Week"
                                     })
@@ -49,7 +51,9 @@ reportSelection.forEach(function(e){
                                 }
                                 else if(this.innerHTML=="Monthly"){
                                     hours[i].innerHTML = data[i].timeframes.monthly.current
-
+                                    last.forEach(function(e){
+                                        e.innerHTML = "Last"
+                                    })
                                     period.forEach(function(e){
                                         e.innerHTML = "Month"
                                     })
